@@ -1,2 +1,2 @@
 # OS
-Operating System projects
+Operating Systems projects
