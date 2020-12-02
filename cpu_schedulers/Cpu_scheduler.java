@@ -158,7 +158,7 @@ public class Cpu_scheduler {
         System.out.printf(format, "Average Response Time",sumRt/jobsCount);
     }
     static void exit(){
-        System.out.println("End of cpu_scheduling");
+        System.out.println("End of cpu_scheduler");
         System.exit(0);
     }
 
