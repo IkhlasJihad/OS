@@ -1,0 +1,143 @@
+.\" Manpage for myshell.
+.\" Contact ikhlasjaydi@gmail.com || hadeelmaqadma@gmail.com to correct errors or typos.
+.TH myshell 1 "December 2020" "version 1.0"
+.SH NAME
+myshell - simple Command Line Interpreter for UNIX OSes
+.SH SYNOPSIS
+.B
+.I myshell  
+.B [batchfile]
+.SH DESCRIPTION
+.PP 
+.BI myshell
+project aims to create a linux shell that provides the basic functionality provided by the common used shells. One can display text,change directory of work, ask for help, list contents of a directory, list environment variables, also it supports I/O redirection on either or both stdin(using: 
+.B <
+) and/or stdout(using: 
+.B >
+)
+.PP
+Output redirection with 
+.B >
+may create the output file if it doesn't exist, and truncate it if exists 
+.PP
+But 
+.B >>
+may create the output file if it doesn't exist, and append to it if exists
+.PP
+.BI myshell 
+issues commands to perform different tasks, in addition it supports background execution of programs, when the command ends with 
+.B &
+.SH ENVIRONMENT
+.B <pathname>/myshell 
+.PP 
+the full path for the shell executable file
+.SH SEE ALSO
+cd(1), clr(1), pause(1), quit(1), dir(1), environ(1), acho(1), help (1)  
+
+.SH AUTHOR
+Ikhlas (ikhlasjaydi@gmail.com) ||
+Hadeel (hadeelmaqadma@gmail.com) 
+
+.TH cd 1 "December 2020" "version 1.0"
+.SH NAME
+cd - change the current default directory to the directory argument if it isn't empty 
+.SH SYNOPSIS
+.B
+.I cd  
+.B  <directory>
+.SH DESCRIPTION
+.PP 
+.BI cd 
+Changes the current default directory to 
+.BI <directory>
+If the 
+.BI <directory> 
+argument is not present, report the current
+directory. If the directory does not exist, an appropriate error should be
+reported. This command updates the 
+.B PWD 
+environment variable
+
+.TH dir 1 "December 2020" "version 1.0"
+.SH NAME
+dir - list the contents of the directory 
+.SH SYNOPSIS
+.B
+.I dir  
+.B  <directory>
+.SH DESCRIPTION
+.PP 
+.BI cd 
+list the contents of the 
+.BI <directory>
+, if the 
+.BI <directory> 
+argument is not present, list the contents of the current directory
+
+.TH clr 1 "December 2020" "version 1.0"
+.SH NAME
+clr - clear the screan
+.SH SYNOPSIS
+.BI cd  
+
+.TH environ 1 "December 2020" "version 1.0"
+.SH NAME
+environ - list all the enviroment variables of the shell 
+.SH SYNOPSIS
+.B
+.I environ  
+.B  [> outputfile]
+.SH DESCRIPTION
+.PP 
+.BI environ 
+list all the enviroment variables of the shell to the output file if redirection provided, or to stdout if not
+
+
+.TH echo 1 "December 2020" "version 1.0"
+.SH NAME
+echo - display the comment on the display followed by new line 
+.SH SYNOPSIS
+.B
+.I echo
+{  
+.B <comment> | < inputfile 
+} [
+.B > outputfile
+]
+.B 
+.SH DESCRIPTION
+.PP 
+.BI echo 
+display the (comment/inputfile) contents on the display (stdout/outputfile) followed by new line
+
+.TH help 1 "December 2020" "version 1.0"
+.SH NAME
+help - display the manual
+.SH SYNOPSIS
+.B
+.I help 
+[
+.B > outputfile
+]
+.B 
+.SH DESCRIPTION
+.PP 
+.BI help 
+display the manual page on the display (stdout/outputfile)
+
+.TH pause 1 "December 2020" "version 1.0"
+.SH NAME
+pause - pause operation of the shell until 
+.BI Enter
+is pressed.
+.SH SYNOPSIS
+.B
+.I pause
+
+
+.TH quit 1 "December 2020" "version 1.0"
+.SH NAME
+quit - quit the shell
+.SH SYNOPSIS
+.B
+.I quitha
