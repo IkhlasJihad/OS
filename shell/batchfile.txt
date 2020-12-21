@@ -1,0 +1,15 @@
+echo "The batch is started"
+dir
+dir ..
+environ
+help
+cd 
+cd test
+pause
+echo "Hello from the batch file" > test_cd_and_redirection.txt
+echo "***List the parent files***" > test_cd_and_redirection.txt
+dir >./test/test_cd_and_redirection.txt
+echo "bye :)" >> test_cd_and_redirection.txt
+clr
+echo "The End"
+quit 
