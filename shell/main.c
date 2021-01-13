@@ -231,6 +231,16 @@ void execute(char **argv){
     }
     close(save_out);
   }
+/*
+  if(input > 0){
+    dup(fileno(stdin));
+    if( dup2(save_in, fileno(stdin)) == -1 ){
+      perror("cannot redirect stdin"); 
+      return;
+    }
+    close(save_in);
+  }
+  */
   resetFlags(); 
   }
 
